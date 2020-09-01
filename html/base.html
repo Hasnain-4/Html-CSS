@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First responsive website</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       #navigation{
+           display: flex;
+           align-items: center;
+           position: relative;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+       }
+       .logo img{
+        height: 45px;
+        margin: 5px 5px;
+       }
+       #navigation ul{
+           display: flex;
+       }
+
+       #navigation ul li{
+           list-style: none;
+            
+       }
+
+       #navigation ul li a{
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            color: rgb(235, 42, 196);
+       }
+       #navigation ul li a:hover{
+            background-color: rgb(203, 217, 221);
+       }
+       #navigation::before{
+           content: "";
+           background-color: rgb(20, 17, 17);
+           position: absolute;
+           height: 100%;
+           width: 100%;
+           z-index: -1;
+           
+       }
+
+       /* new section */
+       #home{
+           display: flex;
+           flex-direction: column;
+           padding: 2px 201px;
+           align-items: center;
+           justify-content: center;
+           height: 410px;
+
+       }
+       #home::before{
+           content: "";
+           background: url('../mumbai.jpg')no-repeat center center/cover;
+           position: absolute;
+           height: 100%;
+           width: 100%;
+           z-index: -1; 
+           opacity: 0.6;          
+
+       }
+       .h1-primary{
+
+            font-size: 3rem;
+       }
+       #home h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+       #home p{
+           padding: 10px;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+       }
+       #home button{
+            padding: 3px 20px;
+            border-radius: 7px;
+            border: 2px solid rgb(77, 82, 150);
+            height: 40px;
+            background-color: rgb(160 221 226);
+            cursor: pointer;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+       }
+
+       /* new */
+
+       
+
+       .center{
+           text-align: center;
+       }
+
+       #services{
+            display: flex;
+          
+       }
+       #services .box{
+          border: 2px solid brown;
+          margin: 4px 5px;
+          padding: 10px;
+          background-color: rgb(215 217 235 / 54%);
+       }
+       #services .box img{
+          display: block;   
+          margin: auto;
+        
+       }
+       .h-secondary{
+        font-size: 2rem;
+       }
+       .box{
+        border-radius: 22px;
+       }
+       .services-container .h1-primary{
+           margin-top: 50px;
+           margin-bottom: 30px;
+       }
+
+       
+    </style>
+
+</head>
+<body>
+
+    <navbar id="navigation">
+
+        <div class="logo">
+            <img src="../college.png" alt="logo">
+        </div>
+
+        <ul>
+            <li class="item"><a href="https://www.google.com" target="_block">Home</a></li>
+            <li class="item"><a href="#">Dashboard</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+
+   </navbar>
+
+   <section id="home">
+    <h1 class="h1-primary">Welcome to the new world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui nostrum, blanditiis.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, alias!</p>
+    <button class="btn">Explore Now</button>
+   </section>
+
+
+   <section class="services-container">
+       <h1 class="h1-primary center">Our Services</h1>
+
+       <div id="services">
+       <div class="box">
+           <img src="../goa.jpg" alt="">
+           <h1 class="h-secondary center">Delhi</h1>
+           <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque.</p>
+
+       </div>
+       <div class="box">
+           <img src="../mumbai.jpg" alt="">
+           <h1 class="h-secondary center">Mumbai</h1>
+           <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque.</p>
+
+       </div>
+       
+       <div class="box">
+           <img src="../goa.jpg" alt="">
+           <h1 class="h-secondary center">Goa</h1>
+           <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque.</p>
+
+       </div>
+        </div>
+   </section>
+    
+</body>
+</html>
